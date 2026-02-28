@@ -3,18 +3,71 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background: linear-gradient(135deg , #FFA6A6 , #FF7070);
+}
 h2{
     text-align: center;
-    color: #474747;
+    color: #F7F8F0;
     margin: 18px;
     font-size: 27px;
+     font-family: "Times", "Times New Roman", "Georgia", serif;
+     transition: transform 1s ease, color 1s ease;
+    
+}
+h2:hover{
+    text-align: center;
+    color: #9E2A3A;
+    margin: 18px;
+    font-size: 27px;
+     font-family: "Times", "Times New Roman", "Georgia", serif;
+     transform: scale(1.2);
+
 }
 table,th,td{
     border-collapse: collapse;
-    border: 2px solid black;
-    border-spacing: 10px; 
+    border: 2px solid #8b7359;
+    padding: 6px;
+    height: 52px;
+    text-size-adjust: 10px;
+    font-size: 18px;
+    border-radius: 3px;
+
+   
 }
 #newsTable{
-        width: 90rem;
-        margin: 2rem 3rem 0;
+        width: 60rem;
+        margin: 2rem auto;
+}
+th{
+    color: #5a1a1a;
+}
+td{
+    color: #7a2222;
+}
+td a{
+    text-decoration: none;
+    color: #FFF4EA;
+    
+
+}
+
+button{
+    margin-left: 14px;
+    border-radius: 8px;
+    border: none;
+    padding: 7px;
+    background-color: #f36289;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+    
+
+}
+button:hover{
+    margin-left: 14px;
+    border-radius: 8px;
+    border: none;
+    padding: 7px;
+    background-color: #FA5C5C;
+    
+
 }
