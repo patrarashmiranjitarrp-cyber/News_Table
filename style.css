@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2{
+    text-align: center;
+    color: #474747;
+    margin: 18px;
+    font-size: 27px;
+}
+table,th,td{
+    border-collapse: collapse;
+    border: 2px solid black;
+    border-spacing: 10px; 
+}
+#newsTable{
+        width: 90rem;
+        margin: 2rem 3rem 0;
+}
