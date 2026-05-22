@@ -3,71 +3,110 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
+    min-height: 100vh;
     background: linear-gradient(135deg , #FFA6A6 , #FF7070);
+    font-family: Arial, sans-serif;
+    padding: 20px;
 }
+
 h2{
     text-align: center;
     color: #F7F8F0;
-    margin: 18px;
-    font-size: 27px;
-     font-family: "Times", "Times New Roman", "Georgia", serif;
-     transition: transform 1s ease, color 1s ease;
-    
+    margin-bottom: 25px;
+    font-size: clamp(2rem, 5vw, 3rem);
+    transition: transform 0.5s ease, color 0.5s ease;
 }
+
 h2:hover{
-    text-align: center;
     color: #9E2A3A;
-    margin: 18px;
-    font-size: 27px;
-     font-family: "Times", "Times New Roman", "Georgia", serif;
-     transform: scale(1.2);
-
+    transform: scale(1.05);
 }
-table,th,td{
-    border-collapse: collapse;
-    border: 2px solid #8b7359;
-    padding: 6px;
-    height: 52px;
-    text-size-adjust: 10px;
-    font-size: 18px;
-    border-radius: 3px;
 
-   
+/* Responsive table wrapper */
+.table-container{
+    width: 100%;
+    overflow-x: auto;
 }
+
 #newsTable{
-        width: 60rem;
-        margin: 2rem auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    border-collapse: collapse;
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    overflow: hidden;
 }
+
+th, td{
+    border: 1px solid #8b7359;
+    padding: 14px;
+    text-align: left;
+    font-size: 1rem;
+}
+
 th{
+    background-color: rgba(255,255,255,0.2);
     color: #5a1a1a;
 }
+
 td{
     color: #7a2222;
 }
+
+tr:nth-child(even){
+    background-color: rgba(255,255,255,0.08);
+}
+
 td a{
     text-decoration: none;
-    color: #FFF4EA;
-    
-
+    color: white;
 }
 
 button{
-    margin-left: 14px;
     border-radius: 8px;
     border: none;
-    padding: 7px;
+    padding: 10px 14px;
     background-color: #f36289;
     box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
-    
-
+    cursor: pointer;
+    transition: 0.3s;
 }
-button:hover{
-    margin-left: 14px;
-    border-radius: 8px;
-    border: none;
-    padding: 7px;
-    background-color: #FA5C5C;
-    
 
+button:hover{
+    background-color: #FA5C5C;
+    transform: scale(1.05);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px){
+
+    th, td{
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    button{
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 500px){
+
+    h2{
+        font-size: 2rem;
+    }
+
+    th, td{
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    button{
+        width: 100%;
+    }
 }

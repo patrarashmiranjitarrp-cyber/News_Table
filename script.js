@@ -9,7 +9,7 @@ async function fetchNews() {
     // if (data.nextPage) {
     //   const nextUrl = `https://newsdata.io/api/1/latest?apikey=${apiKey}&country=in&page=${data.nextPage}`;
     //   fetch(nextUrl); // get next page
-    // }
+    // }git
 
     const articles = data.results; // IMPORTANT: newsdata uses 'results'
 
@@ -21,11 +21,11 @@ async function fetchNews() {
       const row = document.createElement("tr");
 
       row.innerHTML = `
-                <td>${article.title || "N/A"}</td>
-                <td>${article.source_name}|| "N/A"</td>
-                <td>${article.pubDate || "N/A"}</td>
-                <td><a href="${article.link}" target="_blank">Read More</a></td>
-            `;
+    <td>${article.title || "N/A"}</td>
+    <td>${article.creator ? article.creator[0] : "N/A"}</td>
+    <td>${article.source_name || "N/A"}</td>
+    <td>${article.pubDate || "N/A"}</td>
+`;
 
       tableBody.appendChild(row);
     });
